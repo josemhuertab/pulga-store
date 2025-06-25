@@ -209,3 +209,13 @@ form button[type="submit"]:hover {
         margin: 0;
     }
 }
+/* --- Sticky footer --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
