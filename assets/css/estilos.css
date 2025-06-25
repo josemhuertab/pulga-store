@@ -1,0 +1,211 @@
+/* ==========================================================
+   Reset básico para compatibilidad y limpieza
+   ========================================================== */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================
+   Layout base para que el footer se mantenga al final
+   ========================================================== */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Contenido principal flexible para ocupar espacio */
+.contenido-principal {
+    flex: 1 0 auto;
+    padding: 1rem 1rem;
+}
+
+/* ==========================================================
+   Estilos generales
+   ========================================================== */
+h2.subtitulo {
+    font-weight: 600;
+    color: #343a40;
+    border-bottom: 2px solid #6c757d;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+/* ==========================================================
+   Productos (imágenes)
+   ========================================================== */
+.seccion-productos img {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.seccion-productos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================
+   Tabla pedidos
+   ========================================================== */
+.table {
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #e9ecef;
+}
+
+.badge.bg-success {
+    background-color: #198754 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* ==========================================================
+   Formularios (contacto)
+   ========================================================== */
+form label {
+    font-weight: 600;
+    color: #212529;
+}
+
+form input, form textarea {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+}
+
+form button[type="submit"] {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1.5rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0b5ed7;
+}
+
+/* ==========================================================
+   Footer sticky al pie de página
+   ========================================================== */
+.pie-pagina, .pie-pagina p {
+    flex-shrink: 0;
+    background-color: #212529;
+    color: #fff !important;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+    text-align: center;
+    user-select: none;
+    border-top: 1px solid #343a40;
+}
+
+/* ==========================================================
+   Responsividad por dispositivos
+   ========================================================== */
+
+/* Celulares base: 371px */
+@media (max-width: 371px) {
+    h2.subtitulo {
+        font-size: 1.3rem;
+    }
+    .contenido-principal {
+        padding: 1rem 0.75rem;
+    }
+    .seccion-productos img {
+        max-width: 250px;
+    }
+}
+
+/* Tablets base: 768px */
+@media (min-width: 372px) and (max-width: 767px) {
+    h2.subtitulo {
+        font-size: 1.5rem;
+    }
+    .contenido-principal {
+        padding: 1.5rem 1.5rem;
+    }
+    .seccion-productos img {
+        max-width: 280px;
+    }
+}
+
+/* Tablets grandes y PCs base: 768px a 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    h2.subtitulo {
+        font-size: 1.7rem;
+    }
+    .contenido-principal {
+        padding: 2rem 3rem;
+    }
+    .seccion-productos img {
+        max-width: 300px;
+    }
+}
+
+/* Desktop base: 1024px y más */
+@media (min-width: 1024px) {
+    h2.subtitulo {
+        font-size: 1.8rem;
+    }
+    .contenido-principal {
+        padding: 2rem 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .seccion-productos {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .seccion-productos img {
+        max-width: 300px;
+        margin: 0;
+    }
+}

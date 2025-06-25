@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulga Store - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+</head>
+<body>
+
+    <!-- NAVBAR con fecha/hora a la derecha -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fs-2 fw-bold" href="index.html">Pulga Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPulga">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarPulga">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+
+                <!-- Contenedor fecha y hora al extremo derecho -->
+                <span id="script" class="navbar-text text-light small"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido-principal container my-4">
+
+        <section class="seccion-quienes-somos mb-4">
+            <h2 class="subtitulo">¿Quiénes somos?</h2>
+            <p>
+                Pulga Store es una tienda en línea especializada en la venta de productos relacionados con la música.
+                Ofrecemos una amplia variedad de artículos como instrumentos musicales, audífonos de producción,
+                micrófonos, interfaces de audio, parlantes, compresores y mucho más.
+                Estamos ubicados en Santiago de Chile y nuestro objetivo es facilitar el acceso a equipos de audio
+                y producción musical, asegurando una experiencia de compra cómoda, segura y confiable.
+            </p>
+        </section>
+
+        <section class="seccion-productos">
+            <h2 class="subtitulo mb-3">Nuestros productos</h2>
+            <div class="row justify-content-center g-3">
+                <div class="col-6 col-sm-4 col-md-2">
+                    <img src="assets/img/guitarra.jpeg" alt="Guitarra eléctrica" class="img-fluid rounded" />
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <img src="assets/img/audifonos.webp" alt="Audífonos de estudio" class="img-fluid rounded" />
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <img src="assets/img/kit-focusrite.webp" alt="Interfaz Focusrite con micrófono" class="img-fluid rounded" />
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <img src="assets/img/tablero-de-mezcla.webp" alt="Mesa de mezcla profesional" class="img-fluid rounded" />
+                </div>
+                <div class="col-6 col-sm-4 col-md-2">
+                    <img src="assets/img/teclado.jpg" alt="Teclado controlador MIDI" class="img-fluid rounded" />
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pie-pagina text-center">
+        <p class="mb-0">Pulga Store - 2025</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
